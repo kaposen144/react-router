@@ -16,9 +16,12 @@ function App() {
       <div className="App">
         <Header />
 
+        <hr />
+
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route exact path="/goods" component={Goods} />
+        <Route path="/goods/:good" component={Good} />
         {/* путь по которому будет доступна страница,
             компонент который будет отрисовываться тогда,
             когда пользователь переходит по этому пути

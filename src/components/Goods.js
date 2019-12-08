@@ -1,36 +1,44 @@
 /*
-  на странице Goods (Товары) ссылка на страницу 
-  с каждым товаром
+  на странице Goods (Товары) карточки с товарами,
+  можно перейти на страницу каждого товара
 */
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+
+// import Good from "./Good";
 
 const goods = [
   {
     id: 1,
-    name: "Xiaomi MI 9T"
+    name: "Xiaomi MI 9T",
+    description: "123"
   },
   {
     id: 2,
-    name: "Samsung Galaxy A8"
+    name: "Samsung Galaxy A8",
+    description: "123"
   },
   {
     id: 3,
-    name: "iPhone 6"
+    name: "iPhone 6",
+    description: "123"
   }
 ];
 
 const Goods = () => {
   return (
-    <div>
-      {/*тут сразу достали нужные св-ва */}
-      {goods.map(({ id, name }) => (
-        <Link to={`/goods/${id}`} key={id}>
-          {name}
-        </Link>
-      ))}
-    </div>
+    <React.Fragment>
+      <div className="cards">
+        {/*тут сразу достали нужные св-ва */}
+        {goods.map(({ id, name }) => (
+          <Link to={`/goods/${id}`} key={id}>
+            {/* тут карточка с товаром*/}
+            {name}
+          </Link>
+        ))}
+      </div>
+    </React.Fragment>
   );
 };
 
