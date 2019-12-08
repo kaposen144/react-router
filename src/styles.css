@@ -2,3 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
+.cards {
+  display: flex;
+}
+.card {
+  margin: 5px;
+  width: 200px;
+  height: 300px;
+  background: black;
+}

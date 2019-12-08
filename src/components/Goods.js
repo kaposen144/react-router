@@ -4,29 +4,12 @@
 */
 
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// import Good from "./Good";
+import Good from "./Good";
 
-const goods = [
-  {
-    id: 1,
-    name: "Xiaomi MI 9T",
-    description: "123"
-  },
-  {
-    id: 2,
-    name: "Samsung Galaxy A8",
-    description: "123"
-  },
-  {
-    id: 3,
-    name: "iPhone 6",
-    description: "123"
-  }
-];
-
-const Goods = () => {
+const Goods = ({ goods }) => {
+  console.log(props.goods);
   return (
     <React.Fragment>
       <div className="cards">
