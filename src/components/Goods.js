@@ -6,10 +6,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Good from "./Good";
+import "../styles.css";
 
 const Goods = ({ goods }) => {
-  console.log(props.goods);
   return (
     <React.Fragment>
       <div className="cards">
@@ -17,7 +16,7 @@ const Goods = ({ goods }) => {
         {goods.map(({ id, name }) => (
           <Link to={`/goods/${id}`} key={id}>
             {/* тут карточка с товаром*/}
-            {name}
+            <div className="card">{name}</div>
           </Link>
         ))}
       </div>
